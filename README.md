@@ -1,154 +1,16 @@
-# SpendWise Personal Budget & Expense Tracker
+# SpendWise
 
-## Project Overview
+## Project Description
 
-SpendWise is a personal budget and expense tracker built using **HTML and CSS**.
+SpendWise is a simple budget tracking web application. It allows users to enter their budget and expenses and calculates their remaining balance and weekly budget using JavaScript.
 
-For this week's Visual Design Challenge, I improved the existing Budget Tracker by applying a consistent color palette, custom typography, form styling, expense table styling, and the CSS Box Model.
-
-No new functionality was added. The focus was entirely on improving the visual appearance and user experience of the existing project.
-
-## What I Built
-
-I improved the Budget Tracker by creating a clean and organized interface with:
-
-* A page heading section
-* An Add Expense form
-* An Expense Table
-* A consistent color theme
-* Custom Google Fonts
-* Styled buttons and form controls
-* Table borders and spacing
-* Alternating table row colors
-* Rounded corners
-* Responsive styling for smaller screens
-
-## What Each Part Does
-
-### 1. Page Heading
-
-The page heading introduces the **SpendWise Budget Tracker**.
-
-It uses a separate card-style section with:
-
-* A clear heading
-* Supporting text
-* Custom typography
-* Background color
-* Padding
-* Border
-* Rounded corners
-
-This makes the heading visually separate from the rest of the page.
-
-### 2. Add Expense Form
-
-The Add Expense form allows users to enter expense information.
-
-The form contains fields for:
-
-* Expense name
-* Amount
-* Category
-* Date
-
-CSS was used to improve the appearance of the form by adding:
-
-* Input borders
-* Padding
-* Rounded corners
-* Consistent spacing
-* Focus effects
-* A styled button
-
-### 3. Expense Table
-
-The Expense Table displays recorded expenses.
-
-The table contains:
-
-* Name
-* Amount
-* Category
-* Date
-
-CSS styling was added to make the table easier to read.
-
-The table includes:
-
-* A colored header
-* Cell padding
-* Borders
-* Alternating row colors
-* Hover effects
-* Rounded corners
-
-### 4. Color Palette
-
-A consistent color palette was selected for the application.
-
-CSS variables are used to store the main colors so they can be reused throughout the stylesheet.
-
-Example:
-
-```css
-:root {
-    --primary-color: #2563eb;
-    --accent-color: #10b981;
-    --background-color: #f3f6fb;
-    --card-color: #ffffff;
-    --heading-color: #172033;
-    --text-color: #374151;
-}
-```
-
-This makes the design consistent and easier to maintain.
-
-### 5. Typography
-
-Google Fonts are used to improve the appearance and readability of the application.
-
-* **Poppins** is used for headings.
-* **DM Sans** is used for body text, labels, forms, buttons, and table content.
-
-The different fonts create a clear visual hierarchy.
-
-### 6. CSS Box Model
-
-The CSS Box Model was used throughout the project.
-
-The project uses:
-
-* **Margin** to create space between sections.
-* **Padding** to create space inside cards, inputs, buttons, and table cells.
-* **Borders** to define sections and form controls.
-* **Border radius** to create rounded and modern elements.
-
-The page heading, Add Expense form, and Expense Table are presented as separate visual cards.
-
-### 7. Responsive Design
-
-The application is designed to work on different screen sizes.
-
-A media query is used below **768px** to adjust the layout for smaller screens.
-
-```css
-@media (max-width: 768px) {
-    /* Mobile styles */
-}
-```
-
-The responsive design can be tested using the browser's **DevTools Device Toolbar**.
+The project demonstrates basic JavaScript concepts including variables, data types, user input, calculations, functions, and console output.
 
 ## Technologies Used
 
-* HTML5
-* CSS3
-* Google Fonts
-* CSS Custom Properties
-* CSS Box Model
-* Responsive CSS
-* Flexbox
+* **HTML** – Used to create the structure of the SpendWise webpage.
+* **CSS** – Used to style the application and make it visually appealing.
+* **JavaScript** – Used to collect user input, perform calculations, create reusable functions, and display results.
 
 ## Project Files
 
@@ -157,34 +19,91 @@ SpendWise/
 │
 ├── index.html
 ├── style.css
+├── script.js
 └── README.md
 ```
 
-### `index.html`
+### index.html
 
-Contains the structure and content of the SpendWise Budget Tracker, including the page heading, Add Expense form, and Expense Table.
+Contains the structure of the SpendWise application, including the header, dashboard cards, budget section, and footer.
 
-### `style.css`
+### style.css
 
-Contains all the visual styling for the application, including colors, fonts, spacing, borders, buttons, table styling, and responsive design.
+Contains the styling for the SpendWise application, including colors, spacing, cards, buttons, layout, and responsive design.
 
-### `README.md`
+### script.js
 
-Contains information about the project, what was built, the technologies used, and what each part of the project does.
+Contains the JavaScript functionality of the application.
 
-## How to Run
+The JavaScript file:
 
-1. Open the SpendWise project folder.
-2. Make sure `index.html` and `style.css` are in the same folder.
-3. Open `index.html` in a web browser.
-4. Use the browser's DevTools Device Toolbar to test the responsive design.
+1. Creates variables for budgeting information.
+2. Collects budget and expense information using `prompt()`.
+3. Calculates the remaining balance.
+4. Contains reusable budget calculation functions.
+5. Calculates the weekly budget.
+6. Displays the results in the browser console.
+7. Displays the budget results on the webpage.
 
-## Author
+## JavaScript Functions
 
-**Lemuya Jackson**
+### calculateBalance()
 
-## Project
+This function calculates the remaining balance.
 
-**SpendWise Personal Budget & Expense Tracker**
+```javascript
+function calculateBalance(budget, expense) {
+    return budget - expense;
+}
+```
 
-**Assignment:** Visual Design Challenge (CSS)
+### calculateWeeklyBudget()
+
+This function calculates the weekly budget by dividing the monthly budget by four.
+
+```javascript
+function calculateWeeklyBudget(monthlyBudget) {
+    return monthlyBudget / 4;
+}
+```
+
+## Example
+
+If the user enters:
+
+```text
+Budget: KSh 50,000
+Expense: KSh 500
+```
+
+The application calculates:
+
+```text
+Remaining Balance: KSh 49,500
+Weekly Budget: KSh 12,500
+```
+
+## How to Run the Project
+
+1. Open the SpendWise project in Visual Studio Code.
+2. Make sure all four files are present.
+3. Open `index.html` using Live Server.
+4. Enter the requested budget when prompted.
+5. Enter the expense when prompted.
+6. Open the browser Developer Tools using `F12`.
+7. Select the **Console** tab.
+8. View the SpendWise calculations and results.
+
+## Assignment Requirements Completed
+
+* [x] Created and linked `script.js`.
+* [x] Created variables for budgeting information.
+* [x] Collected user input using JavaScript prompts.
+* [x] Calculated the remaining balance.
+* [x] Created reusable budget calculation functions.
+* [x] Stored returned function results in variables.
+* [x] Displayed results in the browser console.
+
+## Conclusion
+
+SpendWise demonstrates how JavaScript can be used to transform a static webpage into an interactive budgeting application. The project uses variables, user input, calculations, functions, and console output to process basic financial information.
