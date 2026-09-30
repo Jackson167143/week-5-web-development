@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpendWise - Budget Tracker</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>SpendWise</h1>
+        <p>Simple and smart budget tracking</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <section class="dashboard">
+
+            <!-- Budget Card -->
+            <div class="card">
+                <h2>Total Budget</h2>
+                <p>KSh 0</p>
+            </div>
+
+            <!-- Expenses Card -->
+            <div class="card">
+                <h2>Total Expenses</h2>
+                <p>KSh 0</p>
+            </div>
+
+            <!-- Balance Card -->
+            <div class="card">
+                <h2>Remaining Balance</h2>
+                <p>KSh 0</p>
+            </div>
+
+        </section>
+
+        <!-- Budget Section -->
+        <section class="budget-section">
+            <h2>Manage Your Budget</h2>
+
+            <label for="budget">Budget Amount</label>
+            <input
+                type="number"
+                id="budget"
+                placeholder="Enter your budget"
+            >
+
+            <label for="expenses">Expenses</label>
+            <input
+                type="number"
+                id="expenses"
+                placeholder="Enter your expenses"
+            >
+
+            <button type="button">Calculate Balance</button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SpendWise. All rights reserved.</p>
+    </footer>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
